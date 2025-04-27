@@ -1,15 +1,10 @@
-#include <gtkmm.h>
+#include "config_frame.h"
 
-class Frame : public Gtk::Window
+Frame::Frame()
 {
-public:
-  Frame();
-  virtual ~Frame();
+  set_title("Basic application");
+  set_default_size(200, 200);
+}
 
-protected:
-  //Signal handlers:
-  void on_button_quit();
-  void on_treeview_row_activated(const Gtk::TreeModel::Path& path, Gtk::TreeViewColumn* column);
-};
 
 
