@@ -16,13 +16,15 @@ protected:
 
 class ModelColumns : public Gtk::TreeModel::ColumnRecord
   {
-  public:
+      public:
+      ModelColumns()
+      { 
+       add(columns_main); 
+       add(columns_sub); 
+      }
 
-    ModelColumns()
-    { add(m_col_id); add(m_col_name); }
-
-    Gtk::TreeModelColumn<int> m_col_id;
-    Gtk::TreeModelColumn<Glib::ustring> m_col_name;
+     Gtk::TreeModelColumn<Glib::ustring> columns_main;
+     Gtk::TreeModelColumn<Glib::ustring> columns_sub;
   };
 
   ModelColumns m_Columns;
