@@ -4,6 +4,7 @@ class Frame : public Gtk::Window
 {
 public:
   Frame();
+  virtual ~Frame();
 };
 
 Frame::Frame()
